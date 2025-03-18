@@ -1,0 +1,183 @@
+/* Bodyの基本設定 */
+body {
+    background-color: #282e36; /* 背景色 */
+    font-family: Arial, sans-serif; /* フォント設定 */
+    color: white; /* テキストの色 */
+    margin: 0; /* マージンなし */
+    padding: 0; /* パディングなし */
+    display: flex; /* フレックスボックス */
+    align-items: center; /* 垂直中央揃え */
+    height: 100vh; /* ビューポートの高さに合わせる */
+    flex-direction: column; /* 子要素を縦に並べる */
+}
+
+/* コンテナの設定 */
+.container {
+    display: flex; /* フレックスボックス */
+    justify-content: space-between; /* 左右に広げる */
+    width: 80%; /* 幅を80%に設定 */
+    max-width: 1000px; /* 最大幅を1000pxに設定 */
+    flex: 1; /* コンテナの高さを可変に */
+}
+
+/* TODOリストのスタイル */
+.todo-list {
+    width: 60%; /* TODOリストの幅を60%に設定 */
+}
+
+/* 見出し（タイトル）のスタイル */
+h1 {
+    text-align: center; /* 中央揃え */
+    margin-top: 20px; /* 上に余白を追加 */
+    font-size: 23px; /* フォントサイズ */
+}
+
+/* リストのスタイル */
+ul {
+    padding-left: 0; /* リストの左側のパディングを無くす */
+}
+
+/* 各リストアイテム（タスク）のスタイル */
+li {
+    display: flex; /* フレックスボックスで横並び */
+    align-items: center; /* アイテムを縦に中央揃え */
+    justify-content: space-between; /* 左右に広げる */
+    margin: 10px 0; /* 上下に10pxの余白 */
+    font-size: 20px; /* フォントサイズ */
+    list-style-type: none; /* リストアイコンを非表示 */
+    color: rgb(255, 255, 255); /* テキストの色 */
+}
+
+/* リストアイテムの前に「•」を追加 */
+li::before {
+    content: "•"; /* 点を表示 */
+    color: rgb(255, 255, 255); /* 色を白に設定 */
+    font-size: 20px; /* サイズ設定 */
+    margin-right: 10px; /* 右に余白を追加 */
+}
+
+/* 完了したタスクに取り消し線を追加 */
+li.done {
+    text-decoration: line-through; /* 取り消し線 */
+    color: rgb(85, 85, 85); /* 色をグレーに変更 */
+}
+
+/* タスク追加フォームのスタイル */
+.todo-form {
+    width: 35%; /* フォームの幅 */
+    display: flex; /* フレックスボックス */
+    align-items: center; /* 中央揃え */
+}
+
+/* 入力フィールドのスタイル */
+input {
+    padding: 10px; /* 内側に余白を追加 */
+    margin-bottom: 0px; /* 下部の余白を無くす */
+    width: 100%; /* 幅を100%に設定 */
+    font-size: 16px; /* フォントサイズ */
+}
+
+/* ボタンのスタイル */
+button {
+    padding: 10px; /* 内側に余白を追加 */
+    width: 40%; /* 幅を40%に設定 */
+    background-color: #c9a83e; /* 背景色 */
+    color: rgb(16, 25, 75); /* テキストの色 */
+    border: none; /* 枠線なし */
+    cursor: pointer; /* カーソルをポインターに */
+}
+
+/* ボタンのホバー時のスタイル */
+button:hover {
+    background-color: #999; /* ホバー時に背景色を変更 */
+}
+
+/* TODOテキストのスタイル */
+.todo-text {
+    flex-grow: 1; /* テキストが可能な限り広がる */
+    transition: color 0.3s; /* 色変更にアニメーションを追加 */
+    cursor: pointer; /* カーソルをポインターに */
+    text-align: left; /* テキストを左揃え */
+}
+
+/* 優先度の色設定 */
+.red-text { color: rgb(223, 134, 134); }
+.yellow-text { color: rgb(218, 195, 121); }
+.green-text { color: rgb(117, 180, 216); }
+
+/* 完了したタスクのスタイル（重複あり） */
+.done {
+    text-decoration: line-through; /* 取り消し線 */
+    color: #999999; /* グレーに変更 */
+}
+
+/* 優先度ボタンのグループ設定 */
+.btn-group {
+    display: flex; /* フレックスボックス */
+    justify-content: flex-end; /* 右揃え */
+    align-items: center; /* アイテムを中央揃え */
+}
+
+/* 優先度ボタンのスタイル */
+.priority-btn {
+    width: 20px; /* 幅を20pxに設定 */
+    height: 20px; /* 高さを20pxに設定 */
+    border-radius: 50%; /* 丸くする */
+    border: none; /* 枠線なし */
+    margin: 2px; /* マージンを2px */
+    cursor: pointer; /* カーソルをポインターに */
+}
+
+/* 優先度ボタンの色設定 */
+.red { background-color: rgb(223, 134, 134); }
+.yellow { background-color: rgb(218, 195, 121); }
+.green { background-color: rgb(117, 180, 216); }
+
+/* 優先度ボタンのホバー時のスタイル */
+.priority-btn:hover {
+    opacity: 0.7; /* 透明度を少し下げる */
+}
+
+/* 削除ボタンのスタイル */
+.delete-btn {
+    display: flex; /* フレックスボックス */
+    align-items: center; /* 中央揃え */
+    justify-content: center; /* 中央揃え */
+    margin-left: 5px; /* 左に余白を追加 */
+    width: 25px; /* 幅を25pxに設定 */
+    height: 25px; /* 高さを25pxに設定 */
+    font-size: 12px; /* フォントサイズ */
+    border: none; /* 枠線なし */
+    border-radius: 15%; /* 丸みを帯びたボタン */
+    cursor: pointer; /* カーソルをポインターに */
+}
+
+/* 削除ボタンのホバー時のスタイル */
+.delete-btn:hover {
+    background-color: #999; /* 背景色を変更 */
+}
+
+/* AM/PM ボタンのスタイル */
+.am-btn, .pm-btn {
+    display: flex; /* フレックスボックス */
+    align-items: center; /* 中央揃え */
+    justify-content: center; /* 中央揃え */
+    width: 25px; /* 幅を25pxに設定 */
+    height: 25px; /* 高さを25pxに設定 */
+    margin-left: 5px; /* 左に余白を追加 */
+    font-size: 10px; /* フォントサイズ */
+    border: none; /* 枠線なし */
+    border-radius: 10px; /* 丸みを帯びたボタン */
+    cursor: pointer; /* カーソルをポインターに */
+}
+
+/* AM/PM ボタンのホバー時のスタイル */
+.am-btn:hover, .pm-btn:hover {
+    background-color: #999; /* 背景色を変更 */
+}
+
+/* AM/PM ラベルのスタイル */
+.am-pm-label {
+    font-size: 10px; /* 小さいフォントサイズ */
+    margin-right: 5px; /* 右に余白を追加 */
+}
