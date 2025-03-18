@@ -64,7 +64,7 @@ li.done {
 
 /* タスク追加フォームのスタイル */
 .todo-form {
-    width: 35%; /* フォームの幅 */
+    width: 30%; /* フォームの幅 */
     display: flex; /* フレックスボックス */
     align-items: center; /* 中央揃え */
 }
@@ -150,6 +150,7 @@ button:hover {
     border: none; /* 枠線なし */
     border-radius: 15%; /* 丸みを帯びたボタン */
     cursor: pointer; /* カーソルをポインターに */
+    background-color: #93a5ad;
 }
 
 /* 削除ボタンのホバー時のスタイル */
@@ -169,6 +170,14 @@ button:hover {
     border: none; /* 枠線なし */
     border-radius: 10px; /* 丸みを帯びたボタン */
     cursor: pointer; /* カーソルをポインターに */
+}
+
+.am-btn{
+    background-color: rgb(241, 202, 73);
+}
+
+.pm-btn{
+    background-color: rgb(171, 127, 212);
 }
 
 /* AM/PM ボタンのホバー時のスタイル */
